@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стать фронтендером</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      min-height: 100vh;
+      font-family: sans-serif;
+    }
+    .block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 600px;
+      max-width: 450px;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      background-color: lightblue;
+    }
+    .block > div {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      max-width: 0 auto;
+    }
+    .block-2 {
+      display: none;
+    }
+    button {
+      position: relative;
+      z-index: 20;
+      top: 0;
+      left: 0;
+    }
+    ul {
+      text-align: left;
+    }
+  </style>
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="block block-1">
+    <h1>Хочешь стать фронтендером?</h1>
+    <div>
+      <button id="yes">Да</button>
+      <button id="no">Нет</button>
+    </div>
+  </div>
+  <div class="block block-2">
+    <h1>В смысле нет????????7?????????<br />пкм по странице и быстро изучать код, который тут написан!!!1<br />всё есть в гугле, тупо пиши туда слова, которые не знаешь</h1>
+    <p>Вот тебе список ресурсов для изучения:</p>
+    <ul>
+      <li>
+        <a href="https://learn.javascript.ru/">лучший ресурс ру сегмента по фронтенду, учебник по джсу и курсы (я тут раньше проходил)</a>
+      </li>
+      <li>
+        <a href="https://webref.ru/">цсс и хтмл справочник</a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/channel/UCE9ODjNIkOHrnSdkYWLfYhg">один из лучших ютуб каналов по фронту, можешь тут глянуть мини курсы и роадмап на 2021 год</a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/c/maxgraph/featured">ещё один канал, в принципе по вёрстке топовый</a>
+      </li>
+    </ul>
+    <p>для начала хватит, а потом уже можно посмотреть</p>
+  </div>
+
+  <script>
+    $("#yes").on({
+        mouseover:function(){
+            $(this).css({
+                left:(Math.random()*200)+"px",
+                top:(Math.random()*200)+"px",
+            });
+        }
+    });
+    $("#no").on("click", function(){
+      $(".block-1").hide();
+      $(".block-2").show();
+    });
+  </script>
+</body>
+</html>
